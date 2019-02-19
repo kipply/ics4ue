@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
-class TicketingSystem { 
-  static int numStudents = 100; 
+public class TicketingSystem { 
+  static int numStudents = 10; 
   static int maxPerTable = 7; 
   static String[] possibleDietaryRestrictions = {"vegetarian", "vegan", "peanut allergy", "lactose intolerant", "halal", "gluten free"};
   
@@ -11,7 +11,7 @@ class TicketingSystem {
     ArrayList<Student> mockStudents = new ArrayList<Student>(); 
     Random rand = new Random();
 
-    // Present student numbers
+    // Preset student numbers
     String[] studentNumbers = new String[numStudents]; 
     for (int i = 0; i < numStudents; i++) { 
       studentNumbers[i] = Integer.toString(rand.nextInt(100000000));
@@ -43,9 +43,13 @@ class TicketingSystem {
       )); 
     }
 
+    // run algorithm
     SeatingAlg mockSeatingAlg = new SeatingAlg();
+      mockSeatingAlg.bidirectionalFriendships(false);
     ArrayList<Table> tables = mockSeatingAlg.generateTables(mockStudents, 7); 
 
+
+    // output tables with names and student numbers
     for (Table table : tables) { 
       ArrayList<Student> students = table.getStudents();
       for (Student student : students) { 
@@ -53,6 +57,8 @@ class TicketingSystem {
       }
       System.out.println("----");
     }
+
+    mockSeatingAlg.outputStatistics();
   }
 
   private static String randName(Random random, boolean isFirst) {
