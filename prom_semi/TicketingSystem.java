@@ -9,7 +9,7 @@ import java.io.PrintWriter;
 
 public class TicketingSystem {
   static HashSet<String> picked = new HashSet<String>();
-    final static int NUM_STUDENTS = 100, STUDENTS_PER_TABLE = 10, EDGES_PER_STUDENT = 5;
+    final static int NUM_STUDENTS = 100, STUDENTS_PER_TABLE = 40, EDGES_PER_STUDENT = 5;
     static Random rng = new Random();
     static boolean[][] friend;
     static int[] friendCnt;
@@ -18,7 +18,7 @@ public class TicketingSystem {
   public static void main(String[] args) throws FileNotFoundException {
     SeatingAlg sa = new SeatingAlg();
     ArrayList<Student> students = new ArrayList<Student>();
-    genFile(5);
+    // genFile(5);
     Scanner in = new Scanner(new File("kust.txt"));
     while (in.hasNext()) {
       students.add(parse(in.nextLine()));

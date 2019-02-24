@@ -113,6 +113,7 @@ public class SeatingAlg {
 
     // init algorithm
     studentsById = createStudentsById(students);
+    students = cleanData(students);
     long startTime = System.currentTimeMillis();
     numStudents = students.size();  
 
@@ -357,6 +358,23 @@ public class SeatingAlg {
       res.put(student.getStudentNumber(), student);
     }
     return res;
+  }
+
+  private ArrayList<Student> cleanData(ArrayList<Student> students) {
+    for (Student s : students) {
+      ArrayList<String> friendIDs = s.getFriendStudentNumbers();
+      ArrayList<String> toRemove = new ArrayList<String>();
+      for (String id : friendIDs){
+        if (!studentsById.containsKey(id)) {
+          toRemove.add(id);
+        }
+      }
+      for (String die : toRemove) {
+        friendIDs.remove(die);
+      }
+      s.setFriendStudentNumbers(friendIDs);
+    }
+    return students;
   }
 
   private double calcSeatingScore(ArrayList<Table> tables) {
