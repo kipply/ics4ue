@@ -1,36 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8ff7e251-a23b-47cb-b8a8-096f91eef4f1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SeatingAlg.java" beforeDir="false" afterPath="$PROJECT_DIR$/SeatingAlg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketingSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicketingSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadocs/SeatingAlg.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/SeatingAlg.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadocs/Student.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/Student.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadocs/Table.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/Table.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadocs/TicketingSystem.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/TicketingSystem.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadocs/allclasses-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/allclasses-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadocs/allclasses-noframe.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/allclasses-noframe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadocs/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/constant-values.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadocs/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/deprecated-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadocs/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/index-files/index-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/index-files/index-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/index-files/index-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/index-files/index-4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/index-files/index-5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/index-files/index-6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/index-files/index-7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/index-files/index-8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadocs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadocs/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/member-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadocs/member-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/member-search-index.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadocs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadocs/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/package-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadocs/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadocs/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadocs/type-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/type-search-index.zip" afterDir="false" />
-    </list>
+    <list default="true" id="8ff7e251-a23b-47cb-b8a8-096f91eef4f1" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,24 +13,7 @@
     <favorites_list name="prom_semi" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SeatingAlg.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="213" column="70" selection-start-line="213" selection-start-column="70" selection-end-line="213" selection-end-column="70" />
-              <folding>
-                <element signature="e#4956#4964#0" expanded="true" />
-                <element signature="e#5298#5305#0" expanded="true" />
-                <element signature="e#5368#5385#0" expanded="true" />
-                <element signature="e#5773#5782#0" expanded="true" />
-                <element signature="e#10318#10334#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -131,9 +85,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49920255" visible="true" weight="0.25274727" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49920255" weight="0.25274727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -142,7 +95,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.50079745" side_tool="true" weight="0.24969475" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32941177" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -173,14 +126,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SeatingAlg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="213" column="70" selection-start-line="213" selection-start-column="70" selection-end-line="213" selection-end-column="70" />
+        <state relative-caret-position="377">
+          <caret line="214" column="70" selection-start-line="214" selection-start-column="70" selection-end-line="214" selection-end-column="70" />
           <folding>
-            <element signature="e#4956#4964#0" expanded="true" />
-            <element signature="e#5298#5305#0" expanded="true" />
-            <element signature="e#5368#5385#0" expanded="true" />
-            <element signature="e#5773#5782#0" expanded="true" />
-            <element signature="e#10318#10334#0" expanded="true" />
+            <element signature="e#4992#5000#0" expanded="true" />
+            <element signature="e#5334#5341#0" expanded="true" />
+            <element signature="e#5404#5421#0" expanded="true" />
+            <element signature="e#5809#5818#0" expanded="true" />
+            <element signature="e#10354#10370#0" expanded="true" />
+            <element signature="e#12190#12191#0" expanded="true" />
+            <element signature="e#12225#12226#0" expanded="true" />
+            <element signature="e#12608#12609#0" expanded="true" />
+            <element signature="e#12653#12654#0" expanded="true" />
+            <element signature="e#13088#13089#0" expanded="true" />
+            <element signature="e#13118#13119#0" expanded="true" />
+            <element signature="e#13458#13459#0" expanded="true" />
+            <element signature="e#13486#13487#0" expanded="true" />
+            <element signature="e#13772#13773#0" expanded="true" />
+            <element signature="e#13803#13804#0" expanded="true" />
+            <element signature="e#16056#16064#0" expanded="true" />
           </folding>
         </state>
       </provider>

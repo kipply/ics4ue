@@ -31,7 +31,7 @@ public class Table {
   /**
   * @return Integer value of the number of students seated at this table.  
   */
-  public int getNumStudents() { 
+  public int getSize() { 
     return students.size(); 
   }
 

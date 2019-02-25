@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.io.PrintWriter;
 
-public class TicketingSystem {
+public class TicketingSystemTest {
   static HashSet<String> picked = new HashSet<String>();
     final static int NUM_STUDENTS = 100, STUDENTS_PER_TABLE = 40, EDGES_PER_STUDENT = 5;
     static Random rng = new Random();
@@ -25,7 +25,7 @@ public class TicketingSystem {
     }
     sa.special(false);
     // sa.bidirectionalFriendships(true);
-    sa.maxRuntime(2);
+    sa.maxRuntime(10);
     sa.showUISettings(false);
     ArrayList<Table> tables = sa.generateTables(students, STUDENTS_PER_TABLE);
 
@@ -41,7 +41,7 @@ public class TicketingSystem {
 
     sa.outputStatistics();
 
-
+    return;
   }
 
   private static Student parse(String in) {

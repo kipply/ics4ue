@@ -128,6 +128,11 @@ public class SeatingAlg {
     ArrayList<Double> lastScores = new ArrayList<Double>(); 
     double degreesOfChange = 1; // "factor" of relative number of changes to make. "1" changes all items.
 
+    if (students.size() == 0) { // handle no-student case
+      frame.setVisible(false); // remove loading 
+      return res; 
+    }
+
     // start searching for solutions
     while (((new Date()).getTime() - startTime) < maxRuntime * 1000) {
       students = shuffleStudents(students, degreesOfChange);
@@ -139,7 +144,7 @@ public class SeatingAlg {
       while (currStu < numStudents) { // while there are students to be seated
         // fill table with as many friends of students as possible
         Table currTable = new Table(tableSize); 
-        while(currTable.getNumStudents() != tableSize && currStu < numStudents) {
+        while(currTable.getSize() != tableSize && currStu < numStudents) {
           boolean f = false; 
           ArrayList<Student> toAdd = new ArrayList<Student>();
           for (Student s : currTable.getStudents()) {
@@ -216,6 +221,10 @@ public class SeatingAlg {
   * Adjusted median percent satisfaction per person: Adjusted median percent satisfaction (uses same calculations described in adjusted mean percent satisfaction)<br>
   */
   public void outputStatistics() {
+    if (numStudents == 0) {
+      System.out.println("Can't output statistics when there are no students"); 
+      return;
+    }
     int totalFriendships = 0; 
     int friendshipsSatisfied = 0; 
     double meanPercentSatisfaction = 0; 
@@ -225,7 +234,7 @@ public class SeatingAlg {
 
     int iter = 0; 
     for (Table t : res) {
-      int studentsInTable = t.getNumStudents();
+      int studentsInTable = t.getSize();
       for (Student s : t.getStudents()) {
         int friendsAtTable = getFriendsAtTable(t, s); 
         friendshipsSatisfied += friendsAtTable; 
