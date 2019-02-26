@@ -126,7 +126,7 @@ public class SeatingAlg {
     double score = 0; 
     double standardDeviation = 1 << 30; // only used for communism
     ArrayList<Double> lastScores = new ArrayList<Double>(); 
-    double degreesOfChange = 1; // "factor" of relative number of changes to make. "1" changes all items.
+    double degreesOfChange = 0.5; // "factor" of relative number of changes to make. "1" changes all items.
 
     if (students.size() == 0) { // handle no-student case
       frame.setVisible(false); // remove loading 
@@ -142,12 +142,14 @@ public class SeatingAlg {
 
       int currStu = 0; 
       while (currStu < numStudents) { // while there are students to be seated
+
         // fill table with as many friends of students as possible
         Table currTable = new Table(tableSize); 
         while(currTable.getSize() != tableSize && currStu < numStudents) {
           boolean f = false; 
           ArrayList<Student> toAdd = new ArrayList<Student>();
           for (Student s : currTable.getStudents()) {
+            if (f) { break; }
             for (String friendID : s.getFriendStudentNumbers()) {
               if (!studentsPlaced.containsKey(friendID)) {
                 toAdd.add(studentsById.get(friendID)); 
@@ -171,6 +173,10 @@ public class SeatingAlg {
           }
         }
         tablesAttempt.add(currTable);
+      }
+
+      if (tablesAttempt.get(tablesAttempt.size() - 1).getSize() == 0){
+        tablesAttempt.remove(tablesAttempt.size() - 1);
       }
 
       // start running comparisons on this arrangement
@@ -199,7 +205,8 @@ public class SeatingAlg {
         } 
       } else {
         if (attemptScore > score) {
-          degreesOfChange += 0.05; // degrees of change represents learning rate
+          degreesOfChange += 1.5; // degrees of change represents learning rate
+          System.out.println((int)((numStudents + 1) / (0.25 * degreesOfChange * 0.25 * degreesOfChange)));
           score = attemptScore;
           res = tablesAttempt;
         }
@@ -337,7 +344,7 @@ public class SeatingAlg {
 
 
   private ArrayList<Student> shuffleStudents(ArrayList<Student> students, double factor) { 
-    int changes = (int)((numStudents + 1) / factor); // this many swaps
+    int changes = (int)((numStudents + 1) / (0.25 * factor * 0.25 * factor)); // this many swaps
 
     Random rand = new Random();
     for (int i = 0; i < changes; i++) {

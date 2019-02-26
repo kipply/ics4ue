@@ -9,7 +9,7 @@ import java.io.PrintWriter;
 
 public class TicketingSystemTest {
   static HashSet<String> picked = new HashSet<String>();
-    final static int NUM_STUDENTS = 100, STUDENTS_PER_TABLE = 40, EDGES_PER_STUDENT = 5;
+    final static int NUM_STUDENTS = 500, STUDENTS_PER_TABLE = 12, EDGES_PER_STUDENT = 5;
     static Random rng = new Random();
     static boolean[][] friend;
     static int[] friendCnt;
@@ -18,28 +18,33 @@ public class TicketingSystemTest {
   public static void main(String[] args) throws FileNotFoundException {
     SeatingAlg sa = new SeatingAlg();
     ArrayList<Student> students = new ArrayList<Student>();
-    // genFile(5);
-    Scanner in = new Scanner(new File("kust.txt"));
-    while (in.hasNext()) {
-      students.add(parse(in.nextLine()));
+    
+    for (int i = 0; i < 50; i++){
+        genFile(1);
+        Scanner in = new Scanner(new File("kust.txt"));
+        while (in.hasNext()) {
+          students.add(parse(in.nextLine()));
+        }
+        sa.special(false);
+        sa.bidirectionalFriendships(false);
+        sa.maxRuntime(5);
+        sa.showUISettings(false);
+
+        ArrayList<Table> tables = sa.generateTables(students, STUDENTS_PER_TABLE);
+    //         // output tables with names and student numbers
+    // for (Table table : tables) { 
+    //   ArrayList<Student> s = table.getStudents();
+    //   for (Student student : s) { 
+    //     System.out.println(student.getName() + " " + student.getStudentNumber());
+    //   }
+    //   System.out.println("----");
+    // }
+
+        sa.outputStatistics();
+        students = new ArrayList<Student>();
     }
-    sa.special(false);
-    // sa.bidirectionalFriendships(true);
-    sa.maxRuntime(10);
-    sa.showUISettings(false);
-    ArrayList<Table> tables = sa.generateTables(students, STUDENTS_PER_TABLE);
-
-    // output tables with names and student numbers
-    for (Table table : tables) { 
-      ArrayList<Student> s = table.getStudents();
-      for (Student student : s) { 
-        System.out.println(student.getName() + " " + student.getStudentNumber());
-      }
-      System.out.println("----");
-    }
 
 
-    sa.outputStatistics();
 
     return;
   }
