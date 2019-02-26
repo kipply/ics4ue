@@ -205,8 +205,8 @@ public class SeatingAlg {
         } 
       } else {
         if (attemptScore > score) {
-          degreesOfChange += 1.5; // degrees of change represents learning rate
-          System.out.println((int)((numStudents + 1) / (0.25 * degreesOfChange * 0.25 * degreesOfChange)));
+          degreesOfChange += 1.75; // degrees of change represents learning rate
+          // System.out.println((int)((numStudents + 1) / (0.25 * degreesOfChange * 0.25 * degreesOfChange)));
           score = attemptScore;
           res = tablesAttempt;
         }

@@ -25,7 +25,7 @@ public class TicketingSystemTest {
         while (in.hasNext()) {
           students.add(parse(in.nextLine()));
         }
-        sa.special(false);
+        // sa.special(false);
         sa.bidirectionalFriendships(false);
         sa.maxRuntime(5);
         sa.showUISettings(false);
