@@ -8,13 +8,7 @@ import java.lang.Math;
 
 import javax.swing.JOptionPane;
 import javax.swing.JFormattedTextField;
-import javax.swing.JPanel;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.ImageIcon;
-import java.awt.GridBagLayout;
-import java.net.URL;
-import java.net.MalformedURLException;
+import java.lang.Runtime;
 
 /**
 * The SeatingAlg class provides methods and tools for generating
@@ -92,24 +86,13 @@ public class SeatingAlg {
       special(n == 1);
     } // end getting user input
 
+    Runtime rt = Runtime.getRuntime();
+    Process loadingPanelProcess = null; 
+    try {
+      loadingPanelProcess = rt.exec("java LoadingPanel");
+    } catch (Exception e) {
 
-    // manage loading screen if applicable 
-    JFrame frame = new JFrame();
-    if (maxRuntime > 5) {
-      JPanel panel = new JPanel();
-      panel.setLayout(new GridBagLayout());
-      
-      URL url = SeatingAlg.class.getResource("/loading.gif");
-      ImageIcon loadingIcon = new ImageIcon(url);
-      JLabel loadGifLabel = new JLabel(loadingIcon);
-      panel.add(loadGifLabel);
-
-      frame.add(panel); 
-      frame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
-      frame.setUndecorated(true);
-      frame.setVisible(true);
     }
-
 
     // init algorithm
     studentsById = createStudentsById(students);
@@ -129,7 +112,9 @@ public class SeatingAlg {
     double degreesOfChange = 0.5; // "factor" of relative number of changes to make. "1" changes all items.
 
     if (students.size() == 0) { // handle no-student case
-      frame.setVisible(false); // remove loading 
+      if (loadingPanelProcess != null) {
+        loadingPanelProcess.destroy();
+      }
       return res; 
     }
 
@@ -213,7 +198,9 @@ public class SeatingAlg {
       }
     }
 
-    frame.setVisible(false); // remove loading 
+    if (loadingPanelProcess != null) {
+      loadingPanelProcess.destroy();
+    }
     return res;
   }
 
