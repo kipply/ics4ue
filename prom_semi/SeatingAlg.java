@@ -43,7 +43,7 @@ public class SeatingAlg {
     if (showUISettings) { // start getting user input
 
       String timeInput = null; 
-      while (timeInput == null) {
+      while (timeInput == null || !timeInput.matches("-?\\d+") || timeInput.equals("0")) {
         timeInput = JOptionPane.showInputDialog(null, 
           "Please enter the amount of time you want the algorithm to run(seconds).", 
           "Seating Algorithm Settings",

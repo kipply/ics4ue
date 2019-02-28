@@ -19,6 +19,7 @@ class LoadingPanel{
             frame.add(panel); 
             frame.setUndecorated(true);
             frame.setLocation(0, 0);
+            frame.setAlwaysOnTop(true);
             frame.pack();
             frame.setVisible(true);
       }

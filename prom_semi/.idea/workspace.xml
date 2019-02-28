@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8ff7e251-a23b-47cb-b8a8-096f91eef4f1" name="Default Changelist" comment="" />
+    <list default="true" id="8ff7e251-a23b-47cb-b8a8-096f91eef4f1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeatingAlg.class" beforeDir="false" afterPath="$PROJECT_DIR$/SeatingAlg.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeatingAlg.java" beforeDir="false" afterPath="$PROJECT_DIR$/SeatingAlg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Table.class" beforeDir="false" afterPath="$PROJECT_DIR$/Table.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/SeatingAlg.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/SeatingAlg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/Student.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/Student.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/Table.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/Table.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/allclasses-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/allclasses-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/allclasses-noframe.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/allclasses-noframe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/constant-values.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/deprecated-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/index-files/index-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/index-files/index-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/index-files/index-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/index-files/index-4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/index-files/index-5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/index-files/index-6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/index-files/index-7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/index-files/index-8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/member-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/member-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/member-search-index.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/type-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/type-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/javadocs/type-search-index.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saves/oeunth/config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/saves/oeunth/config.txt" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,7 +45,7 @@
     <favorites_list name="prom_semi" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -84,7 +116,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49920255" weight="0.25274727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
