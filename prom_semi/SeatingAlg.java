@@ -91,7 +91,7 @@ public class SeatingAlg {
     try {
       loadingPanelProcess = rt.exec("java LoadingPanel");
     } catch (Exception e) {
-
+      System.out.println(e);
     }
 
     // init algorithm
