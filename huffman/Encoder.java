@@ -30,9 +30,9 @@ public class Encoder {
 
         Scanner scan = new Scanner(System.in);
         System.out.println("Please input the file name");
-        // String fileName = scan.next(); 
+        String fileName = scan.next(); 
         // DEBUG LINE
-        String fileName = "test.jpeg"; 
+        // String fileName = "Frankenstein.txt"; 
         long time = System.nanoTime();
 
         BufferedInputStream in = null;
@@ -49,7 +49,6 @@ public class Encoder {
         } catch(Exception e) {
             System.out.println("file not found");
         } 
-        System.out.println("Frequencies done counting at " + (System.nanoTime() - time) / 1e9);
 
         // start constructing tree
         HuffmanNodePriorityQueue pq = new HuffmanNodePriorityQueue();
@@ -84,14 +83,9 @@ public class Encoder {
         // last node in queue is the root
         HuffmanNode treeRoot = pq.pop();
 
-        System.out.println("Tree created at " + (System.nanoTime() - time) / 1e9);
-
         String tree = stringifyTree(treeRoot);
 
-        System.out.println("Tree stringified at " + (System.nanoTime() - time) / 1e9);
-
         String[] compressionMap = genCompress(treeRoot, new String[257], "");
-        System.out.println("Compression map built at " + (System.nanoTime() - time) / 1e9);
 
         // read file again to count expected number of trailing bytes  
         int trailing = 0;
@@ -110,15 +104,12 @@ public class Encoder {
             System.out.println("reading and counting trailing bits needed failed");
         }
 
-        System.out.println("Trailing bytes counted at " + (System.nanoTime() - time) / 1e9);
         // start writing
         try {
-            FileOutputStream clearer = new FileOutputStream("out.mzip");
+            FileOutputStream clearer = new FileOutputStream(fileName + ".mzip");
 
-            System.out.println("Any existing file cleared at " + (System.nanoTime() - time) / 1e9);
-
-            BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream("out.mzip", true));
-            out.write(((fileName + "_compressed").toUpperCase()).getBytes());
+            BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(fileName + ".mzip", true));
+            out.write(((fileName).toUpperCase()).getBytes());
             out.write(13);
             out.write(10);
             out.write((tree).getBytes());
@@ -128,49 +119,35 @@ public class Encoder {
             out.write(Integer.toString(trailing).getBytes());
             out.write(13);
             out.write(10);
-
-            System.out.println("File name, trailing bytes and tree written to file at " + (System.nanoTime() - time) / 1e9);
+            out.close();
 
             in = new BufferedInputStream(new FileInputStream(fileName));
+            BitOutputStream bitOut = new BitOutputStream(new BufferedOutputStream(new FileOutputStream(fileName + ".mzip", true)));
+
             String currByte = "";
 
-            // this is very slow, but it's fine. 
             int c;
-            while ((c = in.read()) != -1 || currByte.length() >= 8) {
-                if (c != -1) {
-                    currByte += compressionMap[c];
+            while ((c = in.read()) != -1) {
+                for(int i = 0; i < compressionMap[c].length(); i++) {
+                    if (compressionMap[c].charAt(i) == '1') {
+                        bitOut.write(true); 
+                    } else {
+                        bitOut.write(false); 
+                    }
                 }
-                if (currByte.length() >= 8) {
-                    out.write(getByteByString(currByte.substring(0, 8))); 
-                    currByte = currByte.substring(8, currByte.length()); 
-                }
+
             }
             in.close();
 
-            if (currByte.length() > 0) {
-
-                while(currByte.length() != 8){
-                    currByte += "1"; 
-                }
-                out.write(getByteByString(currByte)); 
+            for (int i = 0; i < trailing; i++) {
+                bitOut.write(false); 
             }
-
-            out.close();
+            bitOut.close();
         } catch(IOException e) {
             e.printStackTrace();
             System.out.println("Writing to file failed :( ");
         }
         System.out.println("Finished at " + (System.nanoTime() - time) / 1e9);
-    }
-
-    /**
-    * Takes a binary string of 0 and 1 and converts it to a byte array
-    */
-    private static byte getByteByString(String binaryString){
-        byte ret;
-        Integer byteAsInt = Integer.parseInt(binaryString, 2);
-        ret = byteAsInt.byteValue();
-        return ret;
     }
 
     /**
@@ -470,5 +447,54 @@ class HuffmanNodePriorityQueue {
             res++;
         }
         return res + 1;
+    }
+}
+
+
+/**
+* The BitOutputStream class will handle writing bit by bit to an output stream
+*
+* @author  Carol Chen
+* @version 4.2.0
+* @since   28-Mar-2019
+*/
+class BitOutputStream {
+
+    private BufferedOutputStream out;
+    private boolean[] buffer = new boolean[8];
+    private int count = 0;
+
+    /**
+    * Constructor for output stream. 
+    * @param out BufferedOutputStream to use
+    */
+    public BitOutputStream(BufferedOutputStream out) {
+        this.out = out;
+    }
+
+    /**
+    * write method
+    * @param x Bit to write
+    */
+    public void write(boolean x) throws IOException {
+        this.count++;
+        this.buffer[this.count - 1] = x;
+        if (this.count == 8){
+
+            int num = 0;
+            for (int index = 0; index < 8; index++){
+                num = (num << 1) + (this.buffer[index] ? 1 : 0);
+            }
+
+            this.out.write(num);
+            this.count = 0;
+        }
+    }
+
+    /**
+    * Close stream
+    */
+    public void close() throws IOException {
+        this.out.close();
     }
 }
